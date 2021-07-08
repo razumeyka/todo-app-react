@@ -1,0 +1,456 @@
+@font-face {
+	font-family: 'Josefin Sans';
+	src: local('Josefin Sans Thin'), local('JosefinSans-Thin'), url(./fonts/josefinsansthin.woff2) format('woff2'), url(./fonts/josefinsansthin.woff) format('woff'), url(./fonts/josefinsansthin.ttf) format('truetype');
+	font-weight: 100;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Josefin Sans';
+	src: local('Josefin Sans Thin Italic'), local('JosefinSans-ThinItalic'), url(./fonts/josefinsansthinitalic.woff2) format('woff2'), url(./fonts/josefinsansthinitalic.woff) format('woff'), url(./fonts/josefinsansthinitalic.ttf) format('truetype');
+	font-weight: 100;
+	font-style: italic
+}
+
+@font-face {
+	font-family: 'Josefin Sans';
+	src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(./fonts/josefinsanslight.woff2) format('woff2'), url(./fonts/josefinsanslight.woff) format('woff'), url(./fonts/josefinsanslight.ttf) format('truetype');
+	font-weight: 300;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Josefin Sans';
+	src: local('Josefin Sans Light Italic'), local('JosefinSans-LightItalic'), url(./fonts/josefinsanslightitalic.woff2) format('woff2'), url(./fonts/josefinsanslightitalic.woff) format('woff'), url(./fonts/josefinsanslightitalic.ttf) format('truetype');
+	font-weight: 300;
+	font-style: italic
+}
+
+@font-face {
+	font-family: 'Josefin Sans';
+	src: local('Josefin Sans'), local('JosefinSans'), url(./fonts/josefinsans.woff2) format('woff2'), url(./fonts/josefinsans.woff) format('woff'), url(./fonts/josefinsans.ttf) format('truetype');
+	font-weight: 400;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Josefin Sans';
+	src: local('Josefin Sans Italic'), local('JosefinSans-Italic'), url(./fonts/josefinsansitalic.woff2) format('woff2'), url(./fonts/josefinsansitalic.woff) format('woff'), url(./fonts/josefinsansitalic.ttf) format('truetype');
+	font-weight: 400;
+	font-style: italic
+}
+
+@font-face {
+	font-family: 'Josefin Sans';
+	src: local('Josefin Sans SemiBold'), local('JosefinSans-SemiBold'), url(./fonts/josefinsanssemibold.woff2) format('woff2'), url(./fonts/josefinsanssemibold.woff) format('woff'), url(./fonts/josefinsanssemibold.ttf) format('truetype');
+	font-weight: 600;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Josefin Sans';
+	src: local('Josefin Sans SemiBold Italic'), local('JosefinSans-SemiBoldItalic'), url(./fonts/josefinsanssemibolditalic.woff2) format('woff2'), url(./fonts/josefinsanssemibolditalic.woff) format('woff'), url(./fonts/josefinsanssemibolditalic.ttf) format('truetype');
+	font-weight: 600;
+	font-style: italic
+}
+
+@font-face {
+	font-family: 'Josefin Sans';
+	src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(./fonts/josefinsansbold.woff2) format('woff2'), url(./fonts/josefinsansbold.woff) format('woff'), url(./fonts/josefinsansbold.ttf) format('truetype');
+	font-weight: 700;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Josefin Sans';
+	src: local('Josefin Sans Bold Italic'), local('JosefinSans-BoldItalic'), url(./fonts/josefinsansbolditalic.woff2) format('woff2'), url(./fonts/josefinsansbolditalic.woff) format('woff'), url(./fonts/josefinsansbolditalic.ttf) format('truetype');
+	font-weight: 700;
+	font-style: italic
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0
+}
+
+body {
+	background: url(./img/light-bg.jpg) no-repeat center top/100% auto, #f2f2f2;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color: #000;
+	line-height: 1.4;
+	min-width: 320px
+}
+
+.heading {
+	font: 700 40px "Josefin Sans";
+	text-transform: uppercase;
+	color: #fff
+}
+
+.todo-screen {
+	max-width: 570px;
+	padding: 50px 15px;
+	margin: 0 auto
+}
+
+.todo-screen__top-line {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 50px
+}
+
+.todo-screen__note {
+	font: 400 14px "Josefin Sans";
+	text-align: center;
+	color: #9495a5;
+	margin-top: 50px
+}
+
+.theme-btn {
+	width: 26px;
+	height: 26px;
+	cursor: pointer
+}
+
+.todo-new-item {
+	background: #fff;
+	box-shadow: 0 35px 50px -15px rgba(194, 195, 214, .5);
+	border-radius: 5px;
+	padding: 20px 25px;
+	margin-bottom: 25px
+}
+
+.todo-new-item .checkbox {
+	display: flex;
+	flex-wrap: nowrap
+}
+
+.todo-new-item .checkbox input {
+	outline: 0;
+	border: 0;
+	padding: 0;
+	font: 400 18px "Josefin Sans";
+	color: #9495a5
+}
+
+.todo-new-item .checkbox input:focus {
+	border: none
+}
+
+.todo-list {
+	background: #fff;
+	box-shadow: 0 35px 50px -15px rgba(194, 195, 214, .5);
+	border-radius: 5px
+}
+
+.todo-list__no-items {
+	display: none;
+	box-sizing: border-box;
+	padding: 20px 25px;
+	border-bottom: 1px solid #e3e4f1;
+	font: 400 18px "Josefin Sans"
+}
+
+.todo-list__no-items.show {
+	display: block
+}
+
+.todo-list ul {
+	list-style: none;
+	padding: 0;
+	margin: 0
+}
+
+.todo-list__item {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 25px;
+	border-bottom: 1px solid #e3e4f1;
+	cursor: move
+}
+
+.todo-list__remove-btn {
+	display: none;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	position: relative
+}
+
+.todo-list__remove-btn:before {
+	content: "";
+	height: 1px;
+	width: 100%;
+	background: #979797;
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 50%;
+	left: 0
+}
+
+.todo-list__remove-btn:after {
+	content: "";
+	height: 1px;
+	width: 100%;
+	background: #979797;
+	transform: rotate(45deg);
+	position: absolute;
+	top: 50%;
+	left: 0
+}
+
+.todo-list__bottom-line {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	padding: 15px 25px
+}
+
+.todo-list__nav {
+	display: flex;
+	flex-wrap: nowrap;
+	list-style: none;
+	padding: 0;
+	margin: 0
+}
+
+.todo-list__nav li {
+	font: 700 14px "Josefin Sans";
+	color: #9495a5;
+	padding: 0 10px;
+	cursor: pointer
+}
+
+.todo-list__nav li:hover {
+	color: #494c6b
+}
+
+.todo-list__nav li.active {
+	color: #3a7cfd
+}
+
+.todo-list__clear {
+	cursor: pointer
+}
+
+.todo-list__clear:hover {
+	color: #494c6b
+}
+
+.todo-list__item:hover .todo-list__remove-btn {
+	display: block
+}
+
+input[type=checkbox] {
+	display: none
+}
+
+.checkbox {
+	display: block
+}
+
+.checkbox__field {
+	display: block;
+	box-sizing: border-box;
+	font: 400 18px "Josefin Sans";
+	color: #494c6b;
+	padding-left: 50px;
+	position: relative
+}
+
+.checkbox__field:before {
+	content: "";
+	width: 24px;
+	height: 24px;
+	box-sizing: border-box;
+	border-radius: 50%;
+	border: 1px solid #e3e4f1;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto 0
+}
+
+.checkbox__field:after {
+	display: none;
+	content: "";
+	width: 24px;
+	height: 24px;
+	box-sizing: border-box;
+	border-radius: 50%;
+	background: url(./img/icons/checkbox.svg) no-repeat center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto 0
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox__field {
+	text-decoration-line: line-through;
+	color: #d1d2da
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox__field:before {
+	border: 0;
+	background: linear-gradient(135deg, #5df 0, #c058f3 100%)
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox__field:after {
+	display: block
+}
+
+.checkbox:hover .checkbox__field:before {
+	border: 0;
+	background: linear-gradient(135deg, #5df 0, #c058f3 100%)
+}
+
+.checkbox:hover .checkbox__field:after {
+	display: block;
+	width: 22px;
+	height: 22px;
+	background: #fff;
+	left: 1px
+}
+
+.checkbox:hover input[type=checkbox]:checked + .checkbox__field:after {
+	background: url(./img/icons/checkbox.svg) no-repeat center;
+	width: 24px;
+	height: 24px;
+	left: 0
+}
+
+.light-theme {
+	background: url(./img/light-bg.jpg) no-repeat center top/100% auto, #f2f2f2;
+}
+
+.light-theme .theme-btn {
+	background: url(./img/icons/moon.svg) no-repeat center/contain;
+}
+
+.dark-theme {
+	background: url(./img/dark-bg.jpg) no-repeat center top/100% auto, #171823;
+}
+
+.dark-theme .theme-btn {
+	background: url(./img/icons/sun.svg) no-repeat center/contain
+}
+
+.dark-theme .checkbox__field {
+	color: #c8cbe7
+}
+
+.dark-theme .checkbox input[type=checkbox]:checked + .checkbox__field {
+	color: #4d5067
+}
+
+.dark-theme .checkbox:hover .checkbox__field:after {
+	background: #25273d
+}
+
+.dark-theme .todo-new-item {
+	background: #25273d;
+	box-shadow: 0 35px 50px -15px rgba(0, 0, 0, .5)
+}
+
+.dark-theme .todo-new-item .checkbox input {
+	background: #25273d;
+	color: #c8cbe7
+}
+
+.dark-theme .todo-list {
+	background: #25273d;
+	box-shadow: 0 35px 50px -15px rgba(0, 0, 0, .5)
+}
+
+.dark-theme .todo-list__no-items {
+	color: #5b5e7e
+}
+
+.dark-theme .todo-list__item {
+	border-bottom: 1px solid #393a4b
+}
+
+.dark-theme .todo-list__nav li {
+	color: #5b5e7e
+}
+
+.dark-theme .todo-list__nav li:hover {
+	color: #e3e4f1
+}
+
+.dark-theme .todo-list__nav li.active {
+	color: #3a7cfd
+}
+
+.dark-theme .todo-list__bottom-line {
+	color: #5b5e7e
+}
+
+.dark-theme .todo-list__clear {
+	color: #5b5e7e
+}
+
+.dark-theme .todo-list__clear:hover {
+	color: #e3e4f1
+}
+
+.dark-theme .todo-screen__note {
+	color: #5b5e7e
+}
+
+@media screen and (max-width:767px) {
+
+	.dark-theme,
+	.light-theme {
+		background-size: 100% 130px
+	}
+
+	.heading {
+		font-size: 34px
+	}
+
+	.todo-screen {
+		padding: 30px 15px
+	}
+
+	.todo-screen__top-line {
+		margin-bottom: 20px
+	}
+
+	.todo-screen__note {
+		margin-top: 25px
+	}
+
+	.todo-new-item {
+		padding: 20px 15px;
+		margin-bottom: 15px
+	}
+
+	.todo-list__item {
+		padding: 20px 15px
+	}
+
+	.todo-list__bottom-line {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 10px 15px
+	}
+
+	.todo-list__bottom-line ul {
+		margin: 5px 0
+	}
+
+	.checkbox__field {
+		padding-left: 40px
+	}
+}
